@@ -56,6 +56,7 @@ export function ArcSpacesStyleLanding({ onGetStartedClick }) {
               Establish Your Business Presence with a{' '}
               <span className="text-stone-400">Premium Singapore CBD Address</span>
             </h1>
+            {/* Force deployment update */}
             
             <p className="text-xl text-neutral-300 mb-12 leading-relaxed max-w-2xl">
               Use a real International Plaza address to register your company with ACRA, open business bank accounts, receive mail securely, and protect your privacy.
