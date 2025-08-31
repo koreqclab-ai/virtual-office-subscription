@@ -11,6 +11,7 @@ import { ContactForm } from './components/ContactForm';
 import { ThankYouPage } from './components/ThankYouPage';
 import { AnytimeStyleLanding } from './components/AnytimeStyleLanding';
 import { DarkStyleLanding } from './components/DarkStyleLanding';
+import { ArcSpacesStyleLanding } from './components/ArcSpacesStyleLanding';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" element={<MainContent onGetStartedClick={handleGetStartedClick} />} />
           <Route path="/anytime-style" element={<AnytimeStyleLanding onGetStartedClick={handleGetStartedClick} />} />
           <Route path="/dark-style" element={<DarkStyleLanding onGetStartedClick={handleGetStartedClick} />} />
+          <Route path="/arc-spaces-style" element={<ArcSpacesStyleLanding onGetStartedClick={handleGetStartedClick} />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
         </Routes>
         
