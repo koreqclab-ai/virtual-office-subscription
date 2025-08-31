@@ -9,16 +9,16 @@ export function AnsonRoadVirtualOfficeLanding({ onGetStartedClick }) {
           <div className="text-center">
             <div className="mb-6">
               <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                🏢 PRIME CBD LOCATION • 10 ANSON ROAD • INTERNATIONAL PLAZA
+                🏢 CBD VIRTUAL OFFICE $9.99/MONTH* • 10 ANSON ROAD • INTERNATIONAL PLAZA
               </span>
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Virtual Office Singapore Anson Road
-              <span className="block text-blue-600 font-bold">Grade A Building • Direct MRT Access</span>
+              <span className="block text-blue-600 font-bold">From $9.99/Month* • International Plaza CBD</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto font-medium leading-relaxed">
               Get your business address at Singapore's most prestigious location - 10 Anson Road, International Plaza. 
-              CBD prestige with unmatched convenience and professional credibility.
+              CBD prestige at classy but affordable monthly pricing from $9.99* (billed annually).
             </p>
             
             {/* Location Highlights */}
@@ -48,7 +48,7 @@ export function AnsonRoadVirtualOfficeLanding({ onGetStartedClick }) {
                 onClick={() => onGetStartedClick('anson-road-address')}
                 className="bg-blue-600 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-blue-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
               >
-                🏢 Get Your Anson Road Address - $50/month
+                🏢 Get Your Anson Road Address - $9.99/month*
               </button>
               <button 
                 onClick={() => onGetStartedClick('location-tour')}
@@ -58,7 +58,7 @@ export function AnsonRoadVirtualOfficeLanding({ onGetStartedClick }) {
               </button>
             </div>
             <p className="text-sm text-gray-500 mt-4">
-              📍 10 Anson Road, #18-08, International Plaza, Singapore 079903
+              📍 *Annual billing • 10 Anson Road, #18-08, International Plaza, Singapore 079903
             </p>
           </div>
         </div>
@@ -339,17 +339,17 @@ export function AnsonRoadVirtualOfficeLanding({ onGetStartedClick }) {
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Get Your Prestigious Anson Road Address Today
+            Get Your Prestigious Anson Road Address from $9.99/Month*
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join successful businesses at Singapore's premier CBD location - 10 Anson Road, International Plaza
+            Join successful businesses at Singapore's premier CBD location with classy but affordable monthly pricing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => onGetStartedClick('anson-road-signup')}
               className="bg-white text-blue-600 px-12 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
             >
-              🏢 Secure Your Anson Road Address - $50/month
+              🏢 Secure Your Anson Road Address - $9.99/month*
             </button>
             <button 
               onClick={() => onGetStartedClick('building-visit')}
@@ -359,7 +359,7 @@ export function AnsonRoadVirtualOfficeLanding({ onGetStartedClick }) {
             </button>
           </div>
           <p className="text-blue-100 text-sm mt-4">
-            📍 10 Anson Road, #18-08, International Plaza, Singapore 079903
+            📍 *Annual billing • 10 Anson Road, #18-08, International Plaza, Singapore 079903
           </p>
         </div>
       </section>

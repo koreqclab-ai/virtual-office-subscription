@@ -8,20 +8,24 @@ export function ComprehensiveFAQ() {
       category: "Pricing & Packages",
       faqs: [
         {
-          question: "Why is your virtual office only $50/month when others charge $100+?",
-          answer: "We keep costs low through direct building owner relationships since 2009, automated operations, and volume discounts from 1000+ clients. No middleman markups or agent commissions - savings passed directly to you."
+          question: "What are your annual pricing packages?",
+          answer: "Our classy but affordable CBD packages start at $119.88/year for Basic CBD Address. Address + Local Mail Forwarding (Monthly) is $191.88/year, and Address + Weekly Forwarding is $239.88/year. All packages require annual payment and include premium International Plaza prestige."
         },
         {
-          question: "Are there any hidden fees or setup costs?",
-          answer: "No hidden fees whatsoever. $50/month includes your business address, mail reception, and building access. Optional services like mail forwarding ($100/month) are clearly priced upfront. No setup fees, no long-term contracts."
+          question: "How does the postage credits system work?",
+          answer: "Mail forwarding service is included in our packages, with postage charged at cost using prepaid credits ($30/$50/$100 options). We provide low balance alerts at $5 (local) and $15 (international) thresholds. No hidden postage markups - complete transparency."
         },
         {
-          question: "Do you offer price matching against competitors?",
-          answer: "Yes! We guarantee Singapore's cheapest virtual office pricing. Show us any competitor's lower price for comparable CBD services, and we'll beat it by 10% or match it exactly."
+          question: "Do you offer multi-entity discounts?",
+          answer: "Yes! Growing entrepreneurs get substantial discounts: 2nd entity receives 10% off, 3rd entity gets 15% off, and 4th+ entities receive 20% off. Perfect for business portfolios requiring multiple registered addresses."
         },
         {
-          question: "What's the difference between $50 and $100 packages?",
-          answer: "$50 package includes address + self-collection of mail. $100 package adds weekly mail forwarding up to 2kg OR unlimited mail scanning to PDF. Both include free ACRA Contact Address and building access."
+          question: "Why choose annual payment over monthly plans?",
+          answer: "Annual payment demonstrates serious business commitment and unlocks our best pricing. It's designed for established businesses and international companies who value long-term stability and professional credibility at smart pricing."
+        },
+        {
+          question: "What's included in the mail scanning add-on?",
+          answer: "Mail scanning is available for $59.88/year and includes up to 20 pages/month. Additional pages are charged at $0.50 each. Perfect for overseas business owners who need digital document management with clear, predictable costs."
         }
       ]
     },
@@ -72,19 +76,19 @@ export function ComprehensiveFAQ() {
       faqs: [
         {
           question: "Which Singapore banks accept your virtual office address?",
-          answer: "All major banks: DBS (85% success rate with our documentation), UOB (90% success rate), OCBC (80% success rate), Standard Chartered, and most foreign banks. We provide business substance packages."
+          answer: "All major banks recognize our premium International Plaza address: DBS, UOB, OCBC, Standard Chartered, and international banks. Our annual commitment customers receive comprehensive business substance documentation packages that banks trust."
         },
         {
-          question: "Do you help with bank account opening?",
-          answer: "Yes! We provide: (1) Professional business substance documentation, (2) Address verification letters, (3) Meeting room access for bank manager visits, (4) Reference letters from established banking relationships."
+          question: "Do you help with bank account opening for international businesses?",
+          answer: "Absolutely! Our premium CBD address commands respect from financial institutions. We provide professional business substance documentation, address verification letters, and meeting room access for bank presentations."
         },
         {
-          question: "Is this address suitable for FinTech companies?",
-          answer: "Perfect for FinTech! Located 400m from MAS headquarters, surrounded by major banks, within MAS-defined CBD area. Our address has been used for payment services licenses, capital markets licenses, and FinTech sandbox applications."
+          question: "Is this address suitable for international trading companies?",
+          answer: "Perfect for international trade! Our International Plaza CBD location provides the professional credibility needed for Letters of Credit, trade financing, and supplier relationships. Annual commitment demonstrates business stability."
         },
         {
-          question: "Can I use this address for GST registration?",
-          answer: "Yes, IRAS accepts our address for GST registration when you hit $1M+ revenue threshold. We handle all IRAS correspondence, GST audit letters, and provide address verification for tax inspections."
+          question: "How does this compare to budget virtual office providers?",
+          answer: "While budget providers offer basic services, our International Plaza CBD address provides genuine business credibility. Professional annual commitment vs casual monthly plans - designed for serious businesses, not price-shopping."
         }
       ]
     },
@@ -146,16 +150,16 @@ export function ComprehensiveFAQ() {
           answer: "Yes! Professional boardroom for up to 12 people, video conferencing setup, presentation equipment, city skyline views. Tea/coffee included. Book via mobile app with advance notice."
         },
         {
-          question: "Can I register multiple companies at this address?",
-          answer: "Yes, many clients register multiple entities. Each company needs separate virtual office subscription. Volume discounts available for 3+ companies. Consolidated mail handling for efficiency."
+          question: "How do multi-entity discounts work for business portfolios?",
+          answer: "Growing entrepreneurs benefit from our tiered discount system: 2nd entity gets 10% off, 3rd entity receives 15% off, and 4th+ entities get 20% off. Perfect for serious business owners with multiple companies requiring professional CBD addresses."
         },
         {
-          question: "What happens during public holidays or emergencies?",
-          answer: "Building security operates 24/7/365. Emergency contact number for urgent matters. Mail collection continues during holidays. Professional handling of time-sensitive documents even during disruptions."
+          question: "What makes your service different from premium competitors?",
+          answer: "We provide the same International Plaza CBD prestige at 80% cost savings vs premium competitors. Transparent postage pricing instead of hidden markups. Multi-entity discounts for entrepreneurs. Classy but affordable - professional without the premium price tag."
         },
         {
-          question: "How established and reliable is your service?",
-          answer: "Operating since 2009 (16 years), served 1000+ companies, zero address compliance issues. Same building location since inception - no disruptions from relocations. Track record speaks for itself."
+          question: "How does international mail forwarding work?",
+          answer: "International mail forwarding is available as an add-on: +$120/year for monthly delivery or +$300/year for weekly delivery. Uses the same transparent postage credits system with $15 low balance alerts. No hidden international surcharges."
         }
       ]
     }
@@ -173,7 +177,7 @@ export function ComprehensiveFAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to know about Singapore's most affordable virtual office service
+            Everything you need to know about Singapore's classy but affordable CBD virtual office for serious businesses
           </p>
         </div>
 
@@ -232,11 +236,11 @@ export function ComprehensiveFAQ() {
             Our team is ready to help you choose the perfect virtual office solution
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-amber-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors">
-              📞 Call Us Now
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
+              📞 Professional Consultation
             </button>
-            <button className="border-2 border-amber-600 text-amber-600 px-8 py-3 rounded-full font-semibold hover:bg-amber-50 transition-colors">
-              💬 Live Chat Support
+            <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+              💬 Business Address Inquiry
             </button>
           </div>
         </div>

@@ -2,41 +2,41 @@ import React, { useEffect } from 'react';
 
 export function MainContent({ onGetStartedClick }) {
   useEffect(() => {
-    // Add FAQ Schema for Rich Snippets
+    // Add FAQ Schema for Rich Snippets - PAA Optimized
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is a premium virtual office address in Singapore?",
+          "name": "How much does a virtual office cost in Singapore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A premium virtual office address in Singapore provides a prestigious business address at International Plaza, Anson Road CBD for ACRA company registration, professional mail handling, and enhanced business credibility without the cost of physical office rental."
-          }
-        },
-        {
-          "@type": "Question", 
-          "name": "Is Anson & Co ACRA compliant?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Anson & Co provides 100% ACRA-compliant registered office addresses at 10 Anson Road, International Plaza. Our premium CBD address meets all regulatory requirements for Singapore company registration and business registration."
+            "text": "Virtual office costs in Singapore vary significantly by location and services. Budget providers in industrial areas start from $4.17/month, while premium CBD locations can cost $80+ monthly. Our International Plaza CBD address offers the perfect middle ground at $9.99/month (billed annually at $119.88), providing genuine business prestige without premium pricing. This includes ACRA-compliant registration, professional mail handling, and 24/7 building access. Annual billing demonstrates serious business commitment and unlocks substantial savings compared to monthly plans."
           }
         },
         {
           "@type": "Question",
-          "name": "How quickly can I start using my virtual office address?",
+          "name": "What is the cheapest virtual office in Singapore?",
           "acceptedAnswer": {
-            "@type": "Answer", 
-            "text": "Your premium virtual office address is ready immediately after payment confirmation. You can start using the address for ACRA registration and business purposes right away."
+            "@type": "Answer",
+            "text": "The cheapest virtual offices in Singapore start around $4.17/month from providers in Paya Lebar and industrial areas. However, these budget options often lack CBD prestige and may not be accepted by all banks or government agencies. For serious businesses, our $9.99/month International Plaza CBD address (annual billing) offers exceptional value - genuine CBD location, ACRA compliance, professional credibility, and banking acceptance at just 2.5x the cheapest options. Quality matters for business registration, banking relationships, and professional credibility."
           }
         },
         {
           "@type": "Question",
-          "name": "What's included in the premium virtual office address service?",
+          "name": "Is virtual office legal in Singapore?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our premium service includes: ACRA-compliant business address, unlimited mail reception, professional mail handling, free Contact Address for ACRA, and choice of mail forwarding, scanning, or self-collection options."
+            "text": "Yes, virtual offices are completely legal in Singapore when used correctly. ACRA (Accounting and Corporate Regulatory Authority) explicitly allows virtual office addresses for company registration, provided the address is genuine and the business can receive mail there. Key legal requirements include: using a real Singapore address (not a PO Box), ensuring mail reception capability, and maintaining business substance. Our International Plaza address is pre-verified with ACRA, accepted by all major banks, and fully compliant with Singapore company law. We've handled 1000+ registrations since 2009 with zero compliance issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents do I need for virtual office in Singapore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For virtual office setup in Singapore, you typically need: (1) Valid identification (passport/NRIC), (2) Proof of business ownership or directorship, (3) Service agreement with virtual office provider, and (4) Address authorization letter for ACRA filing. For ACRA company registration specifically, you'll need: incorporation form (available online), company constitution, director/shareholder details, and registered address confirmation (which we provide). Additional documents may include business license applications, bank account opening forms, and GST registration paperwork. Our International Plaza service includes comprehensive documentation support, address verification letters, and ACRA filing assistance to ensure smooth business setup."
           }
         }
       ]
@@ -48,526 +48,529 @@ export function MainContent({ onGetStartedClick }) {
     script.text = JSON.stringify(faqSchema);
     document.head.appendChild(script);
 
+    // Cleanup function
     return () => {
-      document.head.removeChild(script);
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
     };
   }, []);
-  const services = [
-    {
-      icon: "🏢",
-      title: "ACRA Virtual Office Singapore Address", 
-      description: "Official ACRA virtual office Singapore at prestigious International Plaza, Anson Road CBD. Best virtual office Singapore for company registration and business credibility at cheapest rates"
-    },
-    {
-      icon: "📮",
-      title: "Professional Virtual Office Singapore Mail Service",
-      description: "Professional mail handling with unlimited reception, secure storage, and flexible collection options. Best virtual office Singapore mail service for maintaining business image"
-    },
-    {
-      icon: "🔒", 
-      title: "Singapore Business Address Service",
-      description: "Use our virtual office Singapore Anson Road for ACRA Contact Address while protecting your personal residential address. Cheapest virtual office Singapore with instant credibility"
-    },
-    {
-      icon: "💰",
-      title: "Cheapest Virtual Office Singapore",
-      description: "Get a Grade A building address at International Plaza, Anson Road CBD without paying premium office rental rates. Cheapest virtual office Singapore - Save 90% vs traditional office"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Self Collection",
-      price: "S$50",
-      period: "/month",
-      popular: false,
-      features: [
-        "Office address @ International Plaza",
-        "Free Contact Address for ACRA",
-        "Unlimited mail reception",
-        "Unlimited self collection",
-        "FREE weekly mail forwarding for 1st Month"
-      ]
-    },
-    {
-      name: "Mail Forwarding", 
-      price: "S$100",
-      period: "/month",
-      popular: true,
-      features: [
-        "Office address @ International Plaza",
-        "Free Contact Address for ACRA",
-        "Unlimited mail reception",
-        "Unlimited self collection",
-        "FREE weekly mail forwarding up to 2kg"
-      ]
-    },
-    {
-      name: "Mail Scanning",
-      price: "S$100", 
-      period: "/month",
-      popular: false,
-      features: [
-        "Office address @ International Plaza",
-        "Free Contact Address for ACRA", 
-        "Unlimited mail reception",
-        "Unlimited self collection",
-        "FREE Unlimited mail scanning to searchable PDF"
-      ]
-    }
-  ];
 
   return (
-    <main>
-      <section id="home" className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-32">
+    <div className="min-h-screen">
+      {/* Hero Section - Dark Background (Anytime Mailbox Style) */}
+      <section className="bg-gray-900 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="mb-4">
-              <span className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                🏆 Singapore's Most Affordable CBD Virtual Office | Trusted by 1000+ Companies Since 2009
-              </span>
-            </div>
-            <h1 className="text-5xl lg:text-6xl font-light text-gray-900 mb-6 leading-tight">
-              Get Your Singapore Business Address
-              <span className="block text-amber-600 font-bold">From Just $50/Month at Anson Road CBD</span>
-            </h1>
-            <div className="max-w-4xl mx-auto mb-8">
-              <p className="text-xl lg:text-2xl text-gray-700 mb-6 font-medium leading-relaxed">
-                Skip expensive office rent. Get a prestigious International Plaza address with professional mail handling, ACRA registration support, and instant credibility.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="text-white">
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Establish Your Business Presence with a{' '}
+                <span className="text-orange-500">Premium Singapore CBD Address</span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Use a real International Plaza address to register your company with ACRA, open business bank accounts, receive mail securely, and protect your privacy.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-8">
-                <div className="flex items-center justify-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700 font-medium">Instant ACRA Setup</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700 font-medium">Bank Account Support</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700 font-medium">Professional Mail Service</span>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <button
+                  onClick={() => onGetStartedClick('hero-primary')}
+                  className="bg-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-colors"
+                >
+                  Get Started
+                </button>
+                <button 
+                  onClick={() => onGetStartedClick('hero-secondary')}
+                  className="border border-gray-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+
+            {/* Right Image - Professional Person with Mobile */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-3xl p-8">
+                <div className="bg-gray-800 rounded-2xl p-8 text-center">
+                  {/* Professional Person with Mobile Device */}
+                  <div className="w-64 h-80 bg-gradient-to-b from-gray-700 to-gray-600 rounded-2xl mx-auto mb-6 flex items-center justify-center relative">
+                    <div className="text-center">
+                      {/* Person */}
+                      <div className="w-24 h-24 bg-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-white text-3xl">👤</span>
+                      </div>
+                      {/* Mobile Device */}
+                      <div className="w-32 h-20 bg-gray-600 rounded-lg mx-auto flex items-center justify-center">
+                        <span className="text-white text-2xl">📱</span>
+                      </div>
+                      {/* Address Badge */}
+                      <div className="absolute -bottom-2 -right-2 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        CBD Address
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-white text-lg font-medium">
+                    Manage your business address from anywhere
+                  </div>
+                  <div className="text-gray-400 text-sm mt-2">
+                    International Plaza • 24/7 Access
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => onGetStartedClick('explore-locations')}
-                className="bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
-              >
-                🚀 Start Your Business Today - Only $50/month
-              </button>
-              <button 
-                onClick={() => onGetStartedClick('consultation')}
-                className="border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-amber-50 transition-all duration-300"
-              >
-                💬 Get Free Business Address Consultation
-              </button>
-            </div>
-            <p className="text-sm text-gray-500 mt-4">
-              ⚡ Instant setup • No long-term contracts • 30-day money-back guarantee
-            </p>
           </div>
         </div>
       </section>
 
-      <section id="services" className="py-20 bg-white">
+      {/* Trust Indicators Section - White Background */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-orange-600 text-2xl">🏢</span>
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Real CBD Address</h3>
+              <p className="text-gray-600 text-sm">International Plaza, Anson Road</p>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-orange-600 text-2xl">✓</span>
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">ACRA Compliant</h3>
+              <p className="text-gray-600 text-sm">Pre-verified business address</p>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-orange-600 text-2xl">📬</span>
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">Mail Forwarding</h3>
+              <p className="text-gray-600 text-sm">Bi-weekly or monthly options</p>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-orange-600 text-2xl">🌏</span>
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">International</h3>
+              <p className="text-gray-600 text-sm">Trusted globally</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What is Virtual Office Section */}
+      <section className="py-20 bg-gray-50" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-              Best Virtual Office Singapore Benefits
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              What is a Virtual Office Address?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
-              ACRA virtual office Singapore at International Plaza, Anson Road CBD • Cheapest virtual office Singapore location • Professional virtual office Singapore trusted by 1000+ companies since 2009
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              A virtual office address provides your business with a genuine CBD street location for company registration through ACRA, professional mail handling, and establishing corporate credibility—all without the overhead of maintaining physical premises.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="group text-center p-8 rounded-2xl hover:bg-gray-50 transition-all duration-300">
-                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 font-light leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section id="locations" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-            Virtual Office Singapore Anson Road Location
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
-            Virtual office Singapore CBD at International Plaza, Anson Road • Best virtual office Singapore Tanjong Pagar area • MRT-accessible • Perfect for ACRA company registration and client meetings
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 text-center">
-              <h3 className="text-2xl font-medium text-gray-900 mb-4">Virtual Office Singapore Anson Road Address</h3>
-              <p className="text-gray-600 font-light mb-4">10 Anson Road, #18-08 International Plaza, Singapore 079903</p>
-              <p className="text-amber-600 font-medium">Virtual office Singapore CBD location • Direct MRT access • Grade A building</p>
-              <p className="text-sm text-gray-500 mt-2">100% ACRA virtual office Singapore • Instant business credibility • Cheapest virtual office Singapore used by 1000+ companies</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-orange-600 text-2xl">🏢</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Premium Location</h3>
+              <p className="text-gray-600 leading-relaxed">
+                International Plaza address commands respect from banks, government agencies, and business partners across Southeast Asia.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-orange-600 text-2xl">📋</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">ACRA Registration</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Use our pre-verified address for company registration, ensuring compliance with all Singapore business requirements.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-orange-600 text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy Protection</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Keep your personal address private while maintaining a professional business presence in Singapore's CBD.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-amber-50 to-orange-50 border-t border-b border-amber-100">
+      {/* Success Stories */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            How Business Owners Benefit
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Vincent Tan */}
+            <div className="bg-gray-50 p-8 rounded-2xl">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-orange-600 font-bold text-xl">VT</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Vincent Tan</h3>
+                  <p className="text-orange-600 font-medium">Digital Products Business</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                "Vincent runs a digital products business selling online courses and software globally. He uses International Plaza for:"
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  Payment processor documents and merchant statements
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  International customer correspondence
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  CBD credibility for partnership negotiations
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  Professional separation from home address
+                </li>
+              </ul>
+            </div>
+
+            {/* Sarah */}
+            <div className="bg-gray-50 p-8 rounded-2xl">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-orange-600 font-bold text-xl">S</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Sarah</h3>
+                  <p className="text-orange-600 font-medium">International Consultant</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                "Sarah is based in London and serves Asian markets. With Singapore CBD address:"
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  Opened local business bank account
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  Registered Singapore entity with ACRA
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  Added prestigious address to proposals
+                </li>
+                <li className="flex items-center">
+                  <span className="text-orange-500 mr-3 text-lg">✓</span>
+                  Boosted client trust and credibility
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Is It Right For You */}
+      <section className="py-20 bg-gray-50" id="locations">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4">
-              Why 1000+ Smart Business Owners Choose Us Over Competitors
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Is a Virtual Office Address Right for You?
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Don't risk your business with unreliable providers. Join successful companies who trust Singapore's most established virtual office service.
-            </p>
+            <p className="text-xl text-gray-600">You might benefit from our CBD address if:</p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-12">
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-amber-600 mb-2">100%</div>
-              <p className="text-sm text-gray-700 font-semibold">ACRA Compliance</p>
-              <p className="text-xs text-gray-500 mt-1">Risk-free registration</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-amber-600 mb-2">16</div>
-              <p className="text-sm text-gray-700 font-semibold">Years Experience</p>
-              <p className="text-xs text-gray-500 mt-1">Since 2009 in Singapore</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-amber-600 mb-2">1000+</div>
-              <p className="text-sm text-gray-700 font-semibold">Happy Clients</p>
-              <p className="text-xs text-gray-500 mt-1">Active businesses</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-amber-600 mb-2">24h</div>
-              <p className="text-sm text-gray-700 font-semibold">Setup Time</p>
-              <p className="text-xs text-gray-500 mt-1">Start immediately</p>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Bank Approved</h3>
-                <p className="text-gray-600 text-sm">All major Singapore banks (DBS, UOB, OCBC) accept our address for business accounts</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+              <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">📄</span>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Government Trusted</h3>
-                <p className="text-gray-600 text-sm">ACRA, IRAS, MAS, and MOM all recognize our International Plaza address</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">ACRA Registration</h3>
+              <p className="text-gray-600 text-sm">Need real Singapore address for company registration</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+              <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🏠</span>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">CBD Prime Location</h3>
-                <p className="text-gray-600 text-sm">International Plaza, Anson Road - Grade A building with direct MRT access</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Home-Based Business</h3>
+              <p className="text-gray-600 text-sm">Run e-commerce or online business professionally</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+              <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🔒</span>
               </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Privacy Protection</h3>
+              <p className="text-gray-600 text-sm">Keep personal address off public records</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+              <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🏢</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">CBD Presence</h3>
+              <p className="text-gray-600 text-sm">Appear established in Singapore's business district</p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-block bg-red-100 border border-red-300 rounded-lg px-4 py-2 mb-6">
-              <span className="text-red-700 font-semibold text-sm">⏰ Limited Time: Skip Setup Fees (Save $100) - Only 20 Spots Left This Month!</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-              Singapore's Most Affordable CBD Virtual Office
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium mb-4">
-              Pay 90% less than traditional office rent. Grade A International Plaza address from just $50/month.
-            </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              <span>✅ No hidden fees</span>
-              <span>✅ No long-term contracts</span>
-              <span>✅ Cancel anytime</span>
-              <span>✅ 30-day guarantee</span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Simple, Transparent Pricing</h2>
+            <p className="text-xl text-gray-600">Choose the plan that fits your business needs</p>
+            <div className="mt-4 inline-flex bg-orange-100 rounded-lg p-1">
+              <span className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-medium">Annual Billing (Save 20%)</span>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div 
-                key={index} 
-                className={`relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 border-2 ${
-                  plan.popular 
-                    ? 'border-amber-600 transform lg:scale-105' 
-                    : 'border-gray-100 hover:border-amber-200'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                      🔥 MOST POPULAR - Best Value
-                    </span>
-                  </div>
-                )}
+            {/* Basic Plan */}
+            <div className="bg-gray-50 p-8 rounded-2xl border-2 border-gray-200 hover:border-orange-300 transition-colors">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Basic Address</h3>
+                <div className="text-4xl font-bold text-orange-500 mb-2">$9.99<span className="text-lg text-gray-500">/month*</span></div>
+                <p className="text-sm text-gray-500 mb-6">*billed annually $119.88</p>
                 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">{plan.name}</h3>
-                  {plan.popular && (
-                    <p className="text-sm text-amber-600 font-medium mb-4">⭐ Recommended for most businesses</p>
-                  )}
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-xl text-gray-500 ml-1">{plan.period}</span>
-                  </div>
-                  {plan.price === "S$50" && (
-                    <p className="text-sm text-green-600 font-medium">💰 Save $2400/month vs traditional office</p>
-                  )}
-                  {plan.price === "S$100" && (
-                    <p className="text-sm text-green-600 font-medium">💰 Complete solution • No additional costs</p>
-                  )}
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <svg className="w-5 h-5 text-amber-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="font-light">{feature}</span>
-                    </li>
-                  ))}
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Premium CBD business address
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    ACRA-compliant registration
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Mail receipt and storage
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Business address usage
+                  </li>
                 </ul>
-                
-                <button 
-                  onClick={() => onGetStartedClick('subscribe')}
-                  className={`w-full py-4 rounded-full font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-700 hover:to-orange-700 transform hover:-translate-y-1 shadow-lg'
-                      : 'border-2 border-amber-600 text-amber-600 hover:bg-amber-50 hover:transform hover:-translate-y-1'
-                  }`}
+
+                <button
+                  onClick={() => onGetStartedClick('basic-plan')}
+                  className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
                 >
-                  {plan.popular ? '🚀 Start Now - Most Popular' : '📞 Choose This Plan'}
+                  Get Started
                 </button>
-                <p className="text-xs text-gray-500 text-center mt-3">
-                  ⚡ Instant activation • 30-day guarantee
-                </p>
               </div>
-            ))}
+            </div>
+
+            {/* Monthly Forwarding - Most Popular */}
+            <div className="bg-white p-8 rounded-2xl border-2 border-orange-500 relative shadow-lg">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+              </div>
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Monthly Forwarding</h3>
+                <div className="text-4xl font-bold text-orange-500 mb-2">$15.99<span className="text-lg text-gray-500">/month*</span></div>
+                <p className="text-sm text-gray-500 mb-6">*billed annually $191.88</p>
+                
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    All Basic Address features
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Monthly mail forwarding
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Singapore-wide delivery
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Last working day schedule
+                  </li>
+                </ul>
+
+                <button
+                  onClick={() => onGetStartedClick('monthly-plan')}
+                  className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+
+            {/* Bi-Weekly Forwarding */}
+            <div className="bg-gray-50 p-8 rounded-2xl border-2 border-gray-200 hover:border-orange-300 transition-colors">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Bi-Weekly Forwarding</h3>
+                <div className="text-4xl font-bold text-orange-500 mb-2">$19.99<span className="text-lg text-gray-500">/month*</span></div>
+                <p className="text-sm text-gray-500 mb-6">*billed annually $239.88</p>
+                
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    All Basic Address features
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Bi-weekly mail forwarding
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Every Friday delivery
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    Priority mail handling
+                  </li>
+                </ul>
+
+                <button
+                  onClick={() => onGetStartedClick('biweekly-plan')}
+                  className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Services */}
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Additional Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <div className="text-2xl mb-2">📄</div>
+                <h4 className="font-bold text-gray-900 mb-2">Mail Scanning</h4>
+                <p className="text-orange-600 font-bold">$4.99/month*</p>
+                <p className="text-xs text-gray-600">15 pages included</p>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <div className="text-2xl mb-2">💰</div>
+                <h4 className="font-bold text-gray-900 mb-2">Cheque Deposits</h4>
+                <p className="text-orange-600 font-bold">$10/cheque</p>
+                <p className="text-xs text-gray-600">1-2 day processing</p>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <div className="text-2xl mb-2">👤</div>
+                <h4 className="font-bold text-gray-900 mb-2">Personal Names</h4>
+                <p className="text-orange-600 font-bold">Same pricing</p>
+                <p className="text-xs text-gray-600">Individual registration</p>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <div className="text-2xl mb-2">💼</div>
+                <h4 className="font-bold text-gray-900 mb-2">Multi-Entity</h4>
+                <p className="text-orange-600 font-bold">Up to 20% off</p>
+                <p className="text-xs text-gray-600">2nd: 10%, 3rd: 15%, 4th+: 20%</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      {/* Bottom Statistics Section - Orange Background (Anytime Mailbox Style) */}
+      <section className="bg-orange-500 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why 1000+ Business Owners Trust Us With Their Success
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-              Real stories from real business owners who chose Singapore's most affordable virtual office
-            </p>
-            <div className="mt-6 flex items-center justify-center gap-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-amber-600">4.9/5</div>
-                <div className="text-sm text-gray-500">Google Reviews</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-amber-600">1000+</div>
-                <div className="text-sm text-gray-500">Happy Clients</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-amber-600">16</div>
-                <div className="text-sm text-gray-500">Years Experience</div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
+            <div>
+              <div className="text-4xl font-bold mb-4">🏢</div>
+              <h3 className="text-2xl font-bold mb-2">Prime CBD Location</h3>
+              <p className="text-orange-100">International Plaza, 10 Anson Road</p>
+              <p className="text-orange-100 text-sm mt-2">Grade A Building • MRT Connected</p>
+            </div>
+            
+            <div>
+              <div className="text-4xl font-bold mb-4">✓</div>
+              <h3 className="text-2xl font-bold mb-2">ACRA Registered Partner</h3>
+              <p className="text-orange-100">Pre-verified business address provider</p>
+              <p className="text-orange-100 text-sm mt-2">16+ Years Experience • 100% Compliant</p>
+            </div>
+            
+            <div>
+              <div className="text-4xl font-bold mb-4">🌏</div>
+              <h3 className="text-2xl font-bold mb-2">Trusted by 500+</h3>
+              <p className="text-orange-100">companies across Southeast Asia</p>
+              <p className="text-orange-100 text-sm mt-2">International Businesses • Local SMEs</p>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex mb-4">
-                <span className="text-amber-400">★★★★★</span>
-              </div>
-              <p className="text-gray-700 font-medium italic mb-6 text-lg leading-relaxed">
-                "Saved my startup $30,000 in first year vs traditional office rent. DBS approved our business account in 2 weeks with their documentation package. Professional service, unbeatable price."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-amber-600 font-bold text-lg">JT</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">James Tan</p>
-                  <p className="text-sm text-gray-600">FinTech Startup Founder</p>
-                  <p className="text-xs text-amber-600">⭐ DBS Bank Account Approved</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex mb-4">
-                <span className="text-amber-400">★★★★★</span>
-              </div>
-              <p className="text-gray-700 font-medium italic mb-6 text-lg leading-relaxed">
-                "Perfect location for client meetings. International Plaza impresses every visitor. Underground MRT access means never late for appointments. Worth every penny at $50/month."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-amber-600 font-bold text-lg">LL</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Ling Ling Wong</p>
-                  <p className="text-sm text-gray-600">Management Consultant</p>
-                  <p className="text-xs text-amber-600">⭐ 2 Years Client</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex mb-4">
-                <span className="text-amber-400">★★★★★</span>
-              </div>
-              <p className="text-gray-700 font-medium italic mb-6 text-lg leading-relaxed">
-                "Mail scanning service is game-changer for my overseas business. Every document digitized same day. IRAS audit correspondence handled professionally. Couldn't run my business without them."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-amber-600 font-bold text-lg">SM</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Sarah Mitchell</p>
-                  <p className="text-sm text-gray-600">E-commerce Business Owner</p>
-                  <p className="text-xs text-amber-600">⭐ IRAS Compliance Success</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex mb-4">
-                <span className="text-amber-400">★★★★★</span>
-              </div>
-              <p className="text-gray-700 font-medium italic mb-6 text-lg leading-relaxed">
-                "Cheapest virtual office in Singapore, hands down. Compared 15 providers before choosing. Same building quality as $200/month competitors. Amazing value for CBD location."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-amber-600 font-bold text-lg">DR</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">David Rodriguez</p>
-                  <p className="text-sm text-gray-600">Trading Company Director</p>
-                  <p className="text-xs text-amber-600">⭐ Price Comparison Winner</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex mb-4">
-                <span className="text-amber-400">★★★★★</span>
-              </div>
-              <p className="text-gray-700 font-medium italic mb-6 text-lg leading-relaxed">
-                "ACRA registration completed in 1 day with their address. UOB business account opened in 10 days. Professional setup that banks actually trust. Highly recommend for serious businesses."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-amber-600 font-bold text-lg">AS</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Amanda Seah</p>
-                  <p className="text-sm text-gray-600">Legal Services Firm</p>
-                  <p className="text-xs text-amber-600">⭐ UOB Account Approved</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex mb-4">
-                <span className="text-amber-400">★★★★★</span>
-              </div>
-              <p className="text-gray-700 font-medium italic mb-6 text-lg leading-relaxed">
-                "16 years in business speaks volumes. When COVID hit, they never missed a single mail delivery. Reliable, professional, and incredibly affordable. My secret competitive advantage."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-amber-600 font-bold text-lg">CL</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Christopher Lee</p>
-                  <p className="text-sm text-gray-600">Tech Consultancy CEO</p>
-                  <p className="text-xs text-amber-600">⭐ 5 Years Client</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Join Singapore's Most Successful Virtual Office Community</h3>
-            <p className="text-amber-100 mb-6">1000+ businesses can't be wrong. See why smart entrepreneurs choose us over expensive alternatives.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold">98%</div>
-                <div className="text-amber-100 text-sm">Bank Account Success Rate</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold">100%</div>
-                <div className="text-amber-100 text-sm">ACRA Compliance Rate</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold">24hr</div>
-                <div className="text-amber-100 text-sm">Average Setup Time</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold">$29.4K</div>
-                <div className="text-amber-100 text-sm">Average Annual Savings</div>
-              </div>
-            </div>
+          <div className="text-center mt-12">
+            <button
+              onClick={() => onGetStartedClick('bottom-cta')}
+              className="bg-white text-orange-500 px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition-colors shadow-lg"
+            >
+              Get Your CBD Address Today - From $9.99/month*
+            </button>
+            <p className="text-orange-100 text-sm mt-3">*Annual billing • Start immediately • No setup fees</p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-            Ready to Get Started?
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+            Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto font-light">
-            Your virtual office is ready immediately after payment is done
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => onGetStartedClick('subscribe')}
-              className="bg-amber-600 text-white px-12 py-4 rounded-full text-lg font-medium hover:bg-amber-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
-            >
-              Subscribe Now
-            </button>
-            <button 
-              onClick={() => onGetStartedClick('view-plans')}
-              className="border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-amber-50 transition-all duration-300"
-            >
-              View Plan Details
-            </button>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-bold text-gray-900 mb-2">Can I use this for ACRA registration?</h3>
+                <p className="text-gray-700 text-sm">Yes, our International Plaza address is pre-verified with ACRA and accepted by all Singapore government agencies.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-bold text-gray-900 mb-2">How quickly can I start?</h3>
+                <p className="text-gray-700 text-sm">You can start using the address immediately after payment and document verification, typically within 1-2 business days.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-bold text-gray-900 mb-2">Do banks accept this address?</h3>
+                <p className="text-gray-700 text-sm">Yes, all major Singapore banks recognize our premium International Plaza address for business account opening.</p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-bold text-gray-900 mb-2">Can I receive international mail?</h3>
+                <p className="text-gray-700 text-sm">Absolutely! We forward mail and packages anywhere in Singapore and internationally at transparent postage rates.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-bold text-gray-900 mb-2">What about multi-entity discounts?</h3>
+                <p className="text-gray-700 text-sm">Yes! 2nd entity gets 10% off, 3rd entity gets 15% off, and 4th+ entities get 20% off. Perfect for growing portfolios.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-bold text-gray-900 mb-2">Why annual billing only?</h3>
+                <p className="text-gray-700 text-sm">Annual billing demonstrates business commitment and unlocks our best rates. It's designed for serious, established businesses.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

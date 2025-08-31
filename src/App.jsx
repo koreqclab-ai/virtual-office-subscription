@@ -9,6 +9,8 @@ import { MobileNavigation } from './components/MobileNavigation';
 import { ChatWidget } from './components/ChatWidget';
 import { ContactForm } from './components/ContactForm';
 import { ThankYouPage } from './components/ThankYouPage';
+import { AnytimeStyleLanding } from './components/AnytimeStyleLanding';
+import { DarkStyleLanding } from './components/DarkStyleLanding';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,6 +34,8 @@ function App() {
         
         <Routes>
           <Route path="/" element={<MainContent onGetStartedClick={handleGetStartedClick} />} />
+          <Route path="/anytime-style" element={<AnytimeStyleLanding onGetStartedClick={handleGetStartedClick} />} />
+          <Route path="/dark-style" element={<DarkStyleLanding onGetStartedClick={handleGetStartedClick} />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
         </Routes>
         

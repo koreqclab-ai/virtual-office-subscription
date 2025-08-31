@@ -38,3 +38,4 @@ logs
 .nuxt
 .vuepress/dist
 .serverless
+.vercel

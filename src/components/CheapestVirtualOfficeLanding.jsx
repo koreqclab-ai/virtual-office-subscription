@@ -9,16 +9,16 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
           <div className="text-center">
             <div className="mb-6">
               <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                💰 CHEAPEST VIRTUAL OFFICE IN SINGAPORE CBD - GUARANTEED!
+                💰 CBD VIRTUAL OFFICE FROM $9.99/MONTH - INTERNATIONAL PLAZA!
               </span>
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Cheapest Virtual Office Singapore
-              <span className="block text-green-600 font-bold">From $50/Month at CBD Location</span>
+              CBD Virtual Office Singapore
+              <span className="block text-green-600 font-bold">From $9.99/Month* at International Plaza</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto font-medium leading-relaxed">
-              Why pay $2500/month for physical office when you can get a prestigious International Plaza address for just $50? 
-              Singapore's cheapest virtual office with professional mail service and ACRA registration support.
+              Why pay $2500/month for physical office when you can get a prestigious International Plaza address for just $9.99/month*? 
+              Classy but affordable CBD virtual office with professional mail service and annual billing for serious businesses.
             </p>
             
             {/* Price Comparison */}
@@ -38,8 +38,8 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
                 </div>
                 <div className="text-center p-6 bg-green-50 rounded-xl border-2 border-green-300">
                   <h4 className="text-lg font-semibold text-green-700 mb-3">Our Virtual Office</h4>
-                  <div className="text-4xl font-bold text-green-600 mb-2">$50</div>
-                  <p className="text-green-600">per month</p>
+                  <div className="text-4xl font-bold text-green-600 mb-2">$9.99</div>
+                  <p className="text-green-600">per month*</p>
                   <ul className="text-sm text-green-600 mt-4 space-y-1">
                     <li>✅ Same prestigious address</li>
                     <li>✅ Professional mail handling</li>
@@ -49,7 +49,7 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
                 </div>
               </div>
               <div className="mt-6 text-center">
-                <span className="text-3xl font-bold text-green-600">Save $2,450/month = $29,400/year!</span>
+                <span className="text-3xl font-bold text-green-600">Save $2,490/month = $29,880/year!</span>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
                 onClick={() => onGetStartedClick('cheapest-package')}
                 className="bg-green-600 text-white px-12 py-4 rounded-full text-lg font-bold hover:bg-green-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
               >
-                🎯 Get Cheapest Virtual Office - $50/month
+                🎯 Get CBD Virtual Office - $9.99/month*
               </button>
               <button 
                 onClick={() => onGetStartedClick('price-match')}
@@ -68,7 +68,7 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
               </button>
             </div>
             <p className="text-sm text-gray-500 mt-4">
-              ⚡ Instant setup • Beat any competitor price • 30-day guarantee
+              ⚡ *Annual billing • Beat any competitor price • 30-day guarantee
             </p>
           </div>
         </div>
@@ -140,9 +140,9 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className="bg-green-50">
-                  <td className="px-6 py-4 font-bold text-green-700">Anson & Co (US)</td>
-                  <td className="px-6 py-4 text-center font-bold text-green-700">$50/month</td>
-                  <td className="px-6 py-4 text-center font-bold text-green-700">$100/month</td>
+                  <td className="px-6 py-4 font-bold text-green-700">VirtualAddress.biz</td>
+                  <td className="px-6 py-4 text-center font-bold text-green-700">$9.99/month*</td>
+                  <td className="px-6 py-4 text-center font-bold text-green-700">$15.99/month*</td>
                   <td className="px-6 py-4 text-center font-bold text-green-700">FREE</td>
                   <td className="px-6 py-4 text-center text-green-700">✅ International Plaza</td>
                 </tr>
@@ -173,7 +173,7 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
           
           <div className="text-center mt-8">
             <p className="text-lg font-semibold text-green-600">
-              💰 Annual Savings vs Closest Competitor: $456 + No Setup Fee = $656 Total Savings!
+              💰 Annual Savings vs Closest Competitor: $1,020 + No Setup Fee = $1,320 Total Savings!
             </p>
           </div>
         </div>
@@ -183,17 +183,17 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
       <section className="py-20 bg-green-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Get Singapore's Cheapest Virtual Office?
+            Ready to Get Your CBD Virtual Office at $9.99/Month*?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join 1000+ smart business owners who chose the most affordable CBD address in Singapore
+            Join 1000+ smart business owners who chose classy but affordable CBD address in Singapore
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => onGetStartedClick('cheapest-signup')}
               className="bg-white text-green-600 px-12 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
             >
-              🎯 Get Started - Just $50/Month
+              🎯 Get Started - Just $9.99/Month*
             </button>
             <button 
               onClick={() => onGetStartedClick('call-now')}
@@ -203,7 +203,7 @@ export function CheapestVirtualOfficeLanding({ onGetStartedClick }) {
             </button>
           </div>
           <p className="text-green-100 text-sm mt-4">
-            ⚡ Instant activation • Price match guarantee • Cancel anytime
+            ⚡ *Annual billing • Price match guarantee • 30-day guarantee
           </p>
         </div>
       </section>
