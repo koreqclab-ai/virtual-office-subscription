@@ -26,22 +26,24 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white font-light text-gray-800 overflow-x-hidden">
-        <Header 
-          isMobileMenuOpen={isMobileMenuOpen}
-          setIsMobileMenuOpen={setIsMobileMenuOpen}
-          onGetStartedClick={handleGetStartedClick}
-        />
-        <Navigation />
-        
         <Routes>
-          <Route path="/" element={<MainContent onGetStartedClick={handleGetStartedClick} />} />
+          <Route path="/" element={<ArcSpacesStyleLanding onGetStartedClick={handleGetStartedClick} />} />
+          <Route path="/old-main" element={
+            <>
+              <Header 
+                isMobileMenuOpen={isMobileMenuOpen}
+                setIsMobileMenuOpen={setIsMobileMenuOpen}
+                onGetStartedClick={handleGetStartedClick}
+              />
+              <Navigation />
+              <MainContent onGetStartedClick={handleGetStartedClick} />
+              <Footer />
+            </>
+          } />
           <Route path="/anytime-style" element={<AnytimeStyleLanding onGetStartedClick={handleGetStartedClick} />} />
           <Route path="/dark-style" element={<DarkStyleLanding onGetStartedClick={handleGetStartedClick} />} />
-          <Route path="/arc-spaces-style" element={<ArcSpacesStyleLanding onGetStartedClick={handleGetStartedClick} />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
         </Routes>
-        
-        <Footer />
         <MobileLocationPanel />
         <MobileNavigation 
           isOpen={isMobileMenuOpen}
