@@ -41,14 +41,15 @@ export function ArcSpacesStyleLanding({ onGetStartedClick }) {
 
       {/* Hero Section */}
       <section className="relative bg-neutral-800 min-h-screen flex items-center overflow-hidden">
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-800/90 to-neutral-800/70"></div>
+        {/* Background Hero Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Crect width='1' height='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+            backgroundImage: "url('/hero-image.png')"
           }}
         ></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-neutral-800/85 to-neutral-800/75"></div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
